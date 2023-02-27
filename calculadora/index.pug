@@ -5,17 +5,42 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title My calculator
+        link(rel="stylesheet", href="./styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     body 
         header 
-            h1 My calculator 
-            div.main-container
-                div.specials-container    
-                    button.special#ac  AC 
+            h1 My calculator
+        main
+            .screen 
+                span.screen-contain     
+            .main-container
+                .specials-container    
+                    button.special#off  OFF
                     button.special#per  % 
+                    button.special#ac  AC 
                     button.special#c  C 
-                div.operators-container
+                .numbers-container 
+                    button.numbers#one(value = 1) 1
+                    button.numbers(value = 2) 2
+                    button.numbers(value = 3) 3
+                    button.numbers(value = 4) 4
+                    button.numbers(value = 5) 5
+                    button.numbers(value = 6) 6
+                    button.numbers(value = 7) 7
+                    button.numbers(value = 8) 8
+                    button.numbers(value = 9) 9
+                    button.numbers(value = 0) 0
+                    button.numbers(value = '=') =
+                    button.numbers(value = '.') .
+                .operators-container
                     button.operator#add + 
                     button.operator#sub -
                     button.operator#divi ÷
                     button.operator#mult x
+        footer 
+                h1  Rubenbot77 github.com
+        script(src="./main.js") 
+
                     

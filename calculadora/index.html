@@ -5,15 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My calculator</title>
+    <link rel="stylesheet" href="./styles.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
   </head>
   <body> 
     <header> 
-      <h1>My calculator </h1>
+      <h1>My calculator</h1>
+    </header>
+    <main>
+      <div class="screen"> <span class="screen-contain">    </span></div>
       <div class="main-container">
         <div class="specials-container">   
-          <button class="special" id="ac"> AC </button>
+          <button class="special" id="off"> OFF</button>
           <button class="special" id="per"> % </button>
+          <button class="special" id="ac"> AC </button>
           <button class="special" id="c"> C </button>
+        </div>
+        <div class="numbers-container"> 
+          <button class="numbers" id="one" value="1">1</button>
+          <button class="numbers" value="2">2</button>
+          <button class="numbers" value="3">3</button>
+          <button class="numbers" value="4">4</button>
+          <button class="numbers" value="5">5</button>
+          <button class="numbers" value="6">6</button>
+          <button class="numbers" value="7">7</button>
+          <button class="numbers" value="8">8</button>
+          <button class="numbers" value="9">9</button>
+          <button class="numbers" value="0">0</button>
+          <button class="numbers" value="=">=</button>
+          <button class="numbers" value=".">.</button>
         </div>
         <div class="operators-container">
           <button class="operator" id="add">+ </button>
@@ -22,6 +43,10 @@
           <button class="operator" id="mult">x</button>
         </div>
       </div>
-    </header>
+    </main>
+    <footer> 
+      <h1> Rubenbot77 github.com</h1>
+    </footer>
+    <script src="./main.js"> </script>
   </body>
 </html>
