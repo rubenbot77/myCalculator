@@ -3,22 +3,30 @@ const perBtn = document.querySelector('#per');
 const acBtn = document.querySelector('#ac');
 const cBtn = document.querySelector('#c');
 const screen = document.querySelector('.screen-contain')
-const numberOne = document.querySelector('#one')
+let buttons = [...document.querySelectorAll('.numbers')];
+let acumulate = [];
 
-numberOne.addEventListener('click', numOne)
-
-function numOne () {
-    screen.innerText = numberOne.value;
-}
-
-// document.addEventListener("click", function(event){
-//     if (event.target.className == "numbers"){
-//         console.log(event.value);
-//     }
-// }, false);
 
 specials()
 function specials (){
+    screen.value = 'off';
+    if (screen.value = 'off') {
+        acumulate = ''
+    }
+    buttons.forEach((button) => {
+        button.addEventListener('click', function (){
+            acumulate.push(button.value)
+            screen.innerText = acumulate.join('')
+            let max = acumulate.length
+            console.log(max);       
+            if (max >= 9) {
+               acumulate = ''
+            }
+             else {
+                return
+            }
+        })
+    })
     offBtn.addEventListener('click', specialOff)
     perBtn.addEventListener('click', specialPer)
     acBtn.addEventListener('click', specialAc)
@@ -27,6 +35,7 @@ function specials (){
     function specialOff() {
         screen.value = 'off';
         screen.innerText = ''
+        acumulate = [];
     }
     function specialPer(){
         console.log(screen.value);
@@ -34,10 +43,12 @@ function specials (){
     function specialAc(){
         screen.value = 'on';
         screen.innerText = '0'
+        acumulate = [];
     }
     function specialC(){
+        acumulate = []
         if (screen.value == 'off') {
-            screen.innerText = ''        
+            screen.innerText = '';      
         } else {
             screen.innerText = '0'
         }
