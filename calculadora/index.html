@@ -14,33 +14,36 @@
       <h1>My calculator</h1>
     </header>
     <main>
-      <div class="screen"> <span class="screen-contain">    </span></div>
+      <div class="screen"> 
+        <div id="acumulate-value"> </div>
+        <div id="current-value">    </div>
+      </div>
       <div class="main-container">
         <div class="specials-container">   
-          <button class="special" id="off"> OFF</button>
-          <button class="special" id="per"> % </button>
-          <button class="special" id="ac"> AC </button>
-          <button class="special" id="c"> C </button>
+          <button class="operator" value="persentage">%</button>
+          <button onclick="display.delete()">  ←</button>
+          <button class="operator" value="exponential"> xˣ</button>
+          <button onclick="display.deleteAll()"> C </button>
         </div>
         <div class="numbers-container"> 
-          <button class="numbers" id="one" value="1">1</button>
-          <button class="numbers" id="two" value="2">2</button>
-          <button class="numbers" id="three" value="3">3</button>
-          <button class="numbers" id="four" value="4">4</button>
-          <button class="numbers" id="five" value="5">5</button>
-          <button class="numbers" id="six" value="6">6</button>
-          <button class="numbers" id="seven" value="7">7</button>
-          <button class="numbers" id="eight" value="8">8</button>
-          <button class="numbers" id="nine" value="9">9</button>
-          <button class="numbers" id="cero" value="0">0</button>
-          <button class="numbers" id="equal" value="=">=</button>
-          <button class="numbers" id="point" value=".">.</button>
+          <button class="numbers">1</button>
+          <button class="numbers">2</button>
+          <button class="numbers">3</button>
+          <button class="numbers">4</button>
+          <button class="numbers">5</button>
+          <button class="numbers">6</button>
+          <button class="numbers">7</button>
+          <button class="numbers">8</button>
+          <button class="numbers">9</button>
+          <button class="numbers">0</button>
+          <button class="operator" value="equal">=</button>
+          <button class="numbers" id="point">.</button>
         </div>
         <div class="operators-container">
-          <button class="operator" id="add">+ </button>
-          <button class="operator" id="sub">-</button>
-          <button class="operator" id="divi">÷</button>
-          <button class="operator" id="mult">x</button>
+          <button class="operator" id="add" value="add">+ </button>
+          <button class="operator" id="sub" value="subtract">-</button>
+          <button class="operator" id="divi" value="divide">÷</button>
+          <button class="operator" id="mult" value="multiply">x</button>
         </div>
       </div>
     </main>

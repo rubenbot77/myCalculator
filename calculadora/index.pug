@@ -14,31 +14,32 @@ html(lang="en")
             h1 My calculator
         main
             .screen 
-                span.screen-contain     
+                    #acumulate-value 
+                    #current-value     
             .main-container
                 .specials-container    
-                    button.special#off  OFF
-                    button.special#per  % 
-                    button.special#ac  AC 
-                    button.special#c  C 
+                    button.operator(value = 'persentage') %
+                    button(onclick = "display.delete()")   ←
+                    button.operator(value = 'exponential')  xˣ
+                    button(onclick = "display.deleteAll()")  C 
                 .numbers-container 
-                    button.numbers#one(value = 1) 1
-                    button.numbers#two(value = 2) 2
-                    button.numbers#three(value = 3) 3
-                    button.numbers#four(value = 4) 4
-                    button.numbers#five(value = 5) 5
-                    button.numbers#six(value = 6) 6
-                    button.numbers#seven(value = 7) 7
-                    button.numbers#eight(value = 8) 8
-                    button.numbers#nine(value = 9) 9
-                    button.numbers#cero(value = 0) 0
-                    button.numbers#equal(value = '=') =
-                    button.numbers#point(value = '.') .
+                    button.numbers 1
+                    button.numbers 2
+                    button.numbers 3
+                    button.numbers 4
+                    button.numbers 5
+                    button.numbers 6
+                    button.numbers 7
+                    button.numbers 8
+                    button.numbers 9
+                    button.numbers 0
+                    button.operator(value = 'equal') =
+                    button.numbers#point .
                 .operators-container
-                    button.operator#add + 
-                    button.operator#sub -
-                    button.operator#divi ÷
-                    button.operator#mult x
+                    button.operator#add(value = 'add') + 
+                    button.operator#sub(value = 'subtract') -
+                    button.operator#divi(value = 'divide') ÷
+                    button.operator#mult(value = 'multiply') x
         script(src="./main.js") 
         footer 
                 h1  Rubenbot77 github.com

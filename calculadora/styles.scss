@@ -12,31 +12,28 @@ header {
     align-items: center;
     background-color: ghostwhite;
     font-family: 'Black Ops One', cursive;
-
 }
 main {
     height: 90vh;
 }
 .screen {
-    margin: 0 auto;
+    grid-column: 1 / -1;
+    padding: 12px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 480px;
     height: 110px;
+    margin: 0 auto;
+    border: 16px solid rgb(0, 54, 69);
     border-radius: 10px;
-    background-color: rgb(0, 54, 69);
-    span{
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        padding: 5px;
-        font-size: 60px;
-        font-family: 'Black Ops One', cursive;
-        width: 90%;
-        height: 70%;
-        background-color: darkolivegreen;
-
+    flex-direction: column;
+    align-items: end;
+    background-color: darkolivegreen;
+    font-family: 'Black Ops One', cursive;
+    #current-value {
+        font-size: 1.5em;
+    }
+    #acumulate-value {
+        font-size: 2em;
     }
 }
 .main-container {
